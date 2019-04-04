@@ -1,0 +1,13 @@
+# Fdb version 3
+["pdflatex"] 1551799441 "/home/jackey/Downloads/G53VIS/coursework/ReportTemplate/Template.tex" "Template.pdf" "Template" 1551799441
+  "/home/jackey/Downloads/G53VIS/coursework/ReportTemplate/Template.tex" 1551797998 8986 08285b70ee48f6d3da13a4b6672f9cca ""
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1550406775 19933 3097d1b31d3c45dc957096f554529032 ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1550406775 8294 6d6e23d5169c0d89d173f6c7e08a005a ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1550406775 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550758526 7919196 c63148e0bd0dece0a8b59da8e3a36538 ""
+  "Template.aux" 1551799441 8 a94a2480d3289e625eea47cd1b285758 ""
+  "Template.tex" 1551797998 8986 08285b70ee48f6d3da13a4b6672f9cca ""
+  "spconf.sty" 0 -1 0 ""
+  (generated)
+  "Template.log"
+  "Template.pdf"
