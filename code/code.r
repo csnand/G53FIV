@@ -21,19 +21,19 @@ message("loading data...")
 
 # full median-gross-annual-workplace-based-earnings-by-region
 # replace all empty cells with NA
-medianEarning <- read.table(paste(R_DATA_GENERAL, "median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
+medianEarning <- read.table(paste(R_DATA_GENERAL, "median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"), fill=TRUE)
 head(medianEarning)
 
 
 # full median-house-price-by-region
 # replace all empty cells with NA
-medianHousePrice <- read.table(paste(R_DATA_GENERAL, "median-house-price-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
+medianHousePrice <- read.table(paste(R_DATA_GENERAL, "median-house-price-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"), fill=TRUE)
 head(medianHousePrice)
 
 
 # full ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region
 # replace all empty cells with NA
-affordRatio <- read.table(paste(R_DATA_GENERAL, "ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
+affordRatio <- read.table(paste(R_DATA_GENERAL, "ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"), fill=TRUE)
 head(affordRatio)
 
 
@@ -55,7 +55,7 @@ affordRatioEss <- subset(affordRatio, select=-c(Code, X1997,X1998,X1999,X))
 # essential house price data for analysis
 # only use use data from 2000 to 2018
 before2000 <- grepl(pattern = "Year.ending.Sep.199|Code", colnames(medianHousePrice))
-medianHousePrice <- medianHousePrice[!before2000]
+medianHousePriceEss <- medianHousePrice[!before2000]
 
 # remove all empty cells
 medianEarningEss = medianEarningEss %>% na.omit()
@@ -77,7 +77,8 @@ medianHousePriceEss <- as.data.frame(medianHousePriceEss) %>% tidyr::gather(key 
 # BASIC ANALYSIS AND VISUALIZATION
 ##############################################################################################################
 
-message("RQ1: When do property sales generally happen? Which month is the best month to sell?")
+message("RQ1: How the mean house price across the regions changedfrom  2000  onward  and  Which  region  has  cheapesthouse.")
+
 
 groupColumns = c("month")
 dataColumns = c("price")
@@ -90,7 +91,7 @@ p2 <- ggplot(data = res, aes(x = month, y = sumcount)) + geom_bar(stat="identity
 grid.arrange(p1, p2, ncol=2)
 
 
-message("RQ2: How do property sale price change according to different property types and age?")
+message("RQ2: How the ratio of house price to workplace-based earn-ings changed from 2000 onward and which region hasthe most affordable houses.")
 
 groupColumns = c("year","city","type","age")
 dataColumns = c("price")
@@ -104,7 +105,7 @@ ggplot(data = res2, aes(x = year, y = price, fill=type)) + geom_bar(stat="identi
 ggplot(data = res, aes(x = year, y = price, fill=age)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
 
 
-message("RQ3: How do property sale price compare across different counties?")
+message("RQ3: How the house price changes across different regioncorelated to each other. (what is the corelation coef-ficiency of house price between different regions.)")
 
 groupColumns = c("year", "type", "county")
 dataColumns = c("price")
