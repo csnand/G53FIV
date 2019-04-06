@@ -3,15 +3,14 @@ library(dplyr)
 library(data.table)
 library(plyr)
 library(gridExtra)
-library(tidyr)
 
 
 SEP <- "\t"
 SEP2 <- ","
 
-R_ANA_GENERAL <<- "/home/jackey/Downloads/G53FIV/code/data/ByRegion/"
+R_ANA_GENERAL <<- "/home/jackey/Downloads/G53FIV/area-analysis/"
 
-R_DATA_GENERAL <<- "/home/jackey/Downloads/G53FIV/code/data/ByRegion/"
+R_DATA_GENERAL <<- "/home/jackey/Downloads/G53FIV/area-analysis/"
 
 ##############################################################################################################
 # LOAD DATA
@@ -19,24 +18,14 @@ R_DATA_GENERAL <<- "/home/jackey/Downloads/G53FIV/code/data/ByRegion/"
 
 message("loading data...")
 
-# full median-gross-annual-workplace-based-earnings-by-region
-# replace all empty cells with NA
-medianEarning <- read.table(paste(R_DATA_GENERAL, "median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
-head(medianEarning)
+# full property sale data
+propSale <- read.table(paste(R_DATA_GENERAL, "property-sale-data-1995-2017-withheader_001sample.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2)
+head(propSale)
 
 
-# full median-house-price-by-region
-# replace all empty cells with NA
-medianHousePrice <- read.table(paste(R_DATA_GENERAL, "median-house-price-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
-head(medianHousePrice)
-
-
-# full ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region
-# replace all empty cells with NA
-affordRatio <- read.table(paste(R_DATA_GENERAL, "ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
-head(affordRatio)
-
-
+# read the county data
+county <- read.table(paste(R_ANA_GENERAL, "counties.tsv", sep=""), quote="\"", header=T, comment.char="", sep=SEP)
+head(county)
 
 ##############################################################################################################
 # DATA MANIPULATION
@@ -44,34 +33,48 @@ head(affordRatio)
 
 message("filtering data...")
 
-# essential earnings data for analysis
-# only use use data from 2000 to 2018
-medianEarningEss <- subset(medianEarning, select=-c(Code, X1997,X1998,X1999,X))
-
-# essential ration data for analysis
-# only use use data from 2000 to 2018
-affordRatioEss <- subset(affordRatio, select=-c(Code, X1997,X1998,X1999,X))
-
-# essential house price data for analysis
-# only use use data from 2000 to 2018
-before2000 <- grepl(pattern = "Year.ending.Sep.199|Code", colnames(medianHousePrice))
-medianHousePrice <- medianHousePrice[!before2000]
-
-# remove all empty cells
-medianEarningEss = medianEarningEss %>% na.omit()
-medianHousePriceEss = medianHousePriceEss %>% na.omit()
-affordRatioEss = affordRatioEss %>% na.omit()
+# essential property sale data for analysis
+# only use standard priced paid entry + additional records
+propSaleEss <- subset(propSale, ppdcategory == "A" && recordstatus == "A")
 
 
-# rearrange data -- put year date in one column
+propSaleEss <- propSaleEss[,c("price","date","postcode","type","age","tenure","city")]
 
-message("rearrenging data...")
-medianEarningEss <- as.data.frame(medianEarningEss) %>% tidyr::gather(key = Year, value = Value, -Name)
-affordRatioEss <- as.data.frame(affordRatioEss) %>% tidyr::gather(key = Year, value = Value, -Name)
-medianHousePriceEss <- as.data.frame(medianHousePriceEss) %>% tidyr::gather(key = Year, value = Value, -Name)
+propSaleEss$yearmonth <- substr(propSaleEss$date, 1, 7)
+propSaleEss$year <- substr(propSaleEss$yearmonth, 1, 4)
+propSaleEss$area <- sub(" .*", "", propSaleEss$postcode)
+propSaleEss <- subset(propSaleEss, type != "O")
+propSaleEss <- subset(propSaleEss, year >= 2006 & year <= 2010)
+propSaleEss <- subset(propSaleEss, tenure == "F" | tenure == "L")
+
+propSaleEss <- propSaleEss[,c("yearmonth","price","city","area","type","age","tenure")]
+
+
+# group by to get essential aggregated data
+groupColumns = c("yearmonth","city","area","type","age","tenure")
+dataColumns = c("price")
+
+propSaleEssGroup = ddply(propSaleEss, groupColumns, summarize, meanprice=mean(price, 2), count=sum(!is.na(price)))
+
+propSaleEssGroup$year <- substr(propSaleEssGroup$yearmonth, 1, 4)
+propSaleEssGroup$month <- substr(propSaleEssGroup$yearmonth, 6, 7)
+
+
+colnames(propSaleEssGroup)[which(names(propSaleEssGroup) == "meanprice")] <- "price"
+
+write.csv(propSaleEssGroup, file = "property_sale_2006_2010_essential_grouped_demo.csv", row.names=FALSE, na="")
+
+propSaleEss <- propSaleEssGroup
 
 
 
+# merge with other data
+
+message("merging data...")
+
+propSaleEss2 <- merge(propSaleEss, county, by.x="area", by.y="postcode.prefix")
+head(propSaleEss2)
+propSaleEss <- propSaleEss2
 
 ##############################################################################################################
 # BASIC ANALYSIS AND VISUALIZATION
