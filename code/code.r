@@ -21,19 +21,19 @@ message("loading data...")
 
 # full median-gross-annual-workplace-based-earnings-by-region
 # replace all empty cells with NA
-medianEarning <- read.table(paste(R_DATA_GENERAL, "median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"), fill=TRUE)
+medianEarning <- read.table(paste(R_DATA_GENERAL, "median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
 head(medianEarning)
 
 
 # full median-house-price-by-region
 # replace all empty cells with NA
-medianHousePrice <- read.table(paste(R_DATA_GENERAL, "median-house-price-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"), fill=TRUE)
+medianHousePrice <- read.table(paste(R_DATA_GENERAL, "median-house-price-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
 head(medianHousePrice)
 
 
 # full ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region
 # replace all empty cells with NA
-affordRatio <- read.table(paste(R_DATA_GENERAL, "ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"), fill=TRUE)
+affordRatio <- read.table(paste(R_DATA_GENERAL, "ratio-of-median-house-price-to-median-gross-annual-workplace-based-earnings-by-region.csv", sep=""), quote="\"", header=T, comment.char="", sep=SEP2, na.strings = c("", "NA"))
 head(affordRatio)
 
 
@@ -70,6 +70,15 @@ medianEarningEss <- as.data.frame(medianEarningEss) %>% tidyr::gather(key = Year
 affordRatioEss <- as.data.frame(affordRatioEss) %>% tidyr::gather(key = Year, value = Value, -Name)
 medianHousePriceEss <- as.data.frame(medianHousePriceEss) %>% tidyr::gather(key = Year, value = Value, -Name)
 
+# convert character to numeric
+medianEarningEss$Value <- as.numeric(gsub("," ,"", medianEarningEss$Value))
+medianHousePriceEss$Value <- as.numeric(gsub("," ,"", medianHousePriceEss$Value))
+
+# convert string to numeric representation
+affordRatioEss$Year <- gsub("X", "", affordRatioEss$Year)
+medianEarningEss$Year <- gsub("X", "", medianEarningEss$Year)
+medianHousePriceEss$Year <- gsub("Year.ending.Sep.", "", medianHousePriceEss$Year)
+
 
 
 
@@ -77,14 +86,8 @@ medianHousePriceEss <- as.data.frame(medianHousePriceEss) %>% tidyr::gather(key 
 # BASIC ANALYSIS AND VISUALIZATION
 ##############################################################################################################
 
-message("RQ1: How the mean house price across the regions changedfrom  2000  onward  and  Which  region  has  cheapesthouse.")
+message("RQ1: How the mean house price across the regions changedfrom  2000  onward  and  Which  region  has  cheapest house.")
 
-
-groupColumns = c("month")
-dataColumns = c("price")
-
-res = ddply(propSaleEss2, groupColumns, summarize, meanprice=mean(price, 2), sumcount=sum(count))
-head(res)
 p1 <- ggplot(data = res, aes(x = month, y = meanprice)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
 p2 <- ggplot(data = res, aes(x = month, y = sumcount)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
 
