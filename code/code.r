@@ -1,9 +1,11 @@
 library(ggplot2)
 library(dplyr)
 library(data.table)
-library(plyr)
 library(gridExtra)
-library(tidyr)
+library(ggcorrplot)
+# library(tidyr)
+# library(plyr)
+
 
 
 SEP <- "\t"
@@ -132,3 +134,19 @@ g1 <- ggplot(data = housePriceCrisis, aes(x = factor(Year), y = Value, fill=Name
 g2 <- ggplot(data = affordRatioCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = affordRatioCrisis$Name) + xlab("Year")
 grid.arrange(g1, g2, nrow=2)
 ggsave("Q3Geom_gridbar.png", plot = grid.arrange(g1, g2, nrow=2), width = 16, height = 6, units = "in", dpi = 320)
+
+
+
+# calculate corelation coefficient
+housePriceForCor <- data.frame(matrix(ncol = 12, nrow = 19))
+name <- medianHousePrice$Name %>% na.omit()
+colnames(housePriceForCor) <- c(as.character(name))
+
+
+for (col in 1:ncol(housePriceForCor)) {
+    housePriceForCor[col] <- (medianHousePriceEss %>% filter(Name == colnames(housePriceForCor)[col]))$Value
+}
+
+houseCor <- cor(housePriceForCor)
+ggcorrplot(houseCor, hc.order = TRUE, outline.col = "white", ggtheme = ggplot2::theme_gray, colors = c("#6D9EC1", "white", "#E46726"), lab = TRUE)
+ggsave("corHeatMap.png", width = 16, height = 9, units = "in", dpi = 100)

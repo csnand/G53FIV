@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.4)  5 APR 2019 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.4)  7 APR 2019 13:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -22,7 +22,7 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./spconf.sty) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/home/jackey/Downloads/G53FIV/report/spconf.sty) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
@@ -358,7 +358,7 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 \@quotelevel=\count291
 \@quotereset=\count292
- (./Template.aux)
+ (/home/jackey/Downloads/G53FIV/report/Template.aux)
 \openout1 = `Template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -410,83 +410,81 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Template.bbl' found.
- (./Template.bbl)
+ (/home/jackey/Downloads/G53FIV/report/Template.bbl)
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
-<image1.jpg, id=1, 1557.82pt x 876.27374pt>
-File: image1.jpg Graphic file (type jpg)
-<use image1.jpg>
-Package pdftex.def Info: image1.jpg  used on input line 113.
-(pdftex.def)             Requested size: 241.84842pt x 136.03496pt.
-<image3.jpg, id=2, 1557.82pt x 876.27374pt>
-File: image3.jpg Graphic file (type jpg)
-<use image3.jpg>
-Package pdftex.def Info: image3.jpg  used on input line 120.
-(pdftex.def)             Requested size: 113.81102pt x 64.00623pt.
-<image4.jpg, id=3, 1557.82pt x 876.27374pt>
-File: image4.jpg Graphic file (type jpg)
-<use image4.jpg>
-Package pdftex.def Info: image4.jpg  used on input line 127.
-(pdftex.def)             Requested size: 113.81102pt x 64.00623pt.
+<Q1Geom_line_no_colour.png, id=1, 1156.32pt x 650.43pt>
+File: Q1Geom_line_no_colour.png Graphic file (type png)
+<use Q1Geom_line_no_colour.png>
+Package pdftex.def Info: Q1Geom_line_no_colour.png  used on input line 111.
+(pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+File: Q1Geom_line_no_colour.png Graphic file (type png)
+<use Q1Geom_line_no_colour.png>
+Package pdftex.def Info: Q1Geom_line_no_colour.png  used on input line 118.
+(pdftex.def)             Requested size: 113.81102pt x 64.01463pt.
+File: Q1Geom_line_no_colour.png Graphic file (type png)
+<use Q1Geom_line_no_colour.png>
+Package pdftex.def Info: Q1Geom_line_no_colour.png  used on input line 125.
+(pdftex.def)             Requested size: 113.81102pt x 64.01463pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 145.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 148.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 148.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1688) in paragraph at lines 146--146
+Underfull \hbox (badness 1688) in paragraph at lines 149--149
 []\OT1/ptm/m/n/10 N. Hen-retty, \OT1/ptm/m/it/10 Hous-ing af-ford-abil-ity in eng-land and
  []
 
 
-Overfull \hbox (52.96622pt too wide) in paragraph at lines 146--146
+Overfull \hbox (52.96622pt too wide) in paragraph at lines 149--149
 \OT1/pcr/m/n/10 / / www . ons . gov . uk / peoplepopulationandcommunity /
  []
 
 
-Overfull \hbox (112.96622pt too wide) in paragraph at lines 146--146
+Overfull \hbox (112.96622pt too wide) in paragraph at lines 149--149
 \OT1/pcr/m/n/10 housing / bulletins / housingaffordabilityinenglandandwales /
  []
 
 
-Overfull \hbox (16.96622pt too wide) in paragraph at lines 146--146
+Overfull \hbox (16.96622pt too wide) in paragraph at lines 149--149
 \OT1/pcr/m/n/10 ons . gov . uk / peoplepopulationandcommunity /
  []
 
 
-Overfull \hbox (259.46622pt too wide) in paragraph at lines 146--146
+Overfull \hbox (259.46622pt too wide) in paragraph at lines 149--149
 \OT1/pcr/m/n/10 housing / datasets / ratioofhousepricetoworkplacebasedearningslowerquartileandmedian$\OT1/ptm/m/n/10 . 
  []
 
 [2
 
- <./image1.jpg> <./image3.jpg> <./image4.jpg>] (./Template.aux)
+ </home/jackey/Downloads/G53FIV/report/Q1Geom_line_no_colour.png>] (/home/jackey/Downloads/G53FIV/report/Template.aux)
 Package logreq Info: Writing requests to 'Template.run.xml'.
 \openout1 = `Template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8886 strings out of 492616
- 154918 string characters out of 6135178
- 581061 words of memory out of 5000000
- 12699 multiletter control sequences out of 15000+600000
+ 8875 strings out of 492616
+ 155213 string characters out of 6135178
+ 582061 words of memory out of 5000000
+ 12691 multiletter control sequences out of 15000+600000
  19942 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,7n,45p,924b,1229s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Template.pdf (2 pages, 696426 bytes).
+Output written on /home/jackey/Downloads/G53FIV/report/Template.pdf (2 pages, 115527 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 30 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
