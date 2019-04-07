@@ -92,9 +92,15 @@ earningCrisis <- medianEarningEss %>% filter(Year == 2008 | Year == 2009)
 ##############################################################################################################
 
 message("RQ1: How the mean house price across the regions changedfrom  2000  onward  and  Which  region  has  cheapest house.")
+ggplot(medianHousePriceEss, aes(x = factor(Year), y = Value)) + geom_point() + xlab("Year")
+ggsave("Q1Geom_point_no_colour.png", width = 16, height = 9, units = "in", dpi = 100)
 
 ggplot(medianHousePriceEss, aes(x = factor(Year), y = Value)) + geom_point(aes(color = Name)) + xlab("Year")
 ggsave("Q1Geom_point.png", width = 16, height = 9, units = "in", dpi = 100)
+
+
+ggplot(medianHousePriceEss, aes(x = factor(Year), y = Value, group=Name)) + geom_line() + xlab("Year")
+ggsave("Q1Geom_line_no_colour.png", width = 16, height = 9, units = "in", dpi = 100)
 
 ggplot(medianHousePriceEss, aes(x = factor(Year), y = Value, group=Name, colour=Name)) + geom_line() + xlab("Year")
 ggsave("Q1Geom_line.png", width = 16, height = 9, units = "in", dpi = 100)
@@ -105,8 +111,14 @@ ggsave("Q1Geom_gridbar.png", width = 16, height = 6, units = "in", dpi = 320)
 
 message("RQ2: How the ratio of house price to workplace-based earn-ings changed from 2000 onward and which region hasthe most affordable houses.")
 
+ggplot(affordRatioEss, aes(x = factor(Year), y = Value)) + geom_point() + xlab("Year")
+ggsave("Q2Geom_point_no_colour.png", width = 16, height = 9, units = "in", dpi = 100)
+
 ggplot(affordRatioEss, aes(x = factor(Year), y = Value)) + geom_point(aes(color = Name)) + xlab("Year")
 ggsave("Q2Geom_point.png", width = 16, height = 9, units = "in", dpi = 100)
+
+ggplot(affordRatioEss, aes(x = factor(Year), y = Value, group=Name)) + geom_line() + xlab("Year")
+ggsave("Q2Geom_line_no_colour.png", width = 16, height = 9, units = "in", dpi = 100)
 
 ggplot(affordRatioEss, aes(x = factor(Year), y = Value, group=Name, colour=Name)) + geom_line() + xlab("Year")
 ggsave("Q2Geom_line.png", width = 16, height = 9, units = "in", dpi = 100)
