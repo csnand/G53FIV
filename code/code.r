@@ -75,10 +75,15 @@ medianEarningEss$Value <- as.numeric(gsub("," ,"", medianEarningEss$Value))
 medianHousePriceEss$Value <- as.numeric(gsub("," ,"", medianHousePriceEss$Value))
 
 # convert string to numeric representation
-affordRatioEss$Year <- gsub("X", "", affordRatioEss$Year)
-medianEarningEss$Year <- gsub("X", "", medianEarningEss$Year)
-medianHousePriceEss$Year <- gsub("Year.ending.Sep.", "", medianHousePriceEss$Year)
+affordRatioEss$Year <- as.numeric(gsub("X", "", affordRatioEss$Year))
+medianEarningEss$Year <- as.numeric(gsub("X", "", medianEarningEss$Year))
+medianHousePriceEss$Year <- as.numeric(gsub("Year.ending.Sep.", "", medianHousePriceEss$Year))
 
+
+# filter dta related to economy crisis 
+housePriceCrisis <- medianHousePriceEss %>% filter(Year == 2008 | Year == 2009)
+affordRatioCrisis <- affordRatioEss %>% filter(Year == 2008 | Year == 2009)
+earningCrisis <- medianEarningEss %>% filter(Year == 2008 | Year == 2009)
 
 
 
@@ -88,40 +93,30 @@ medianHousePriceEss$Year <- gsub("Year.ending.Sep.", "", medianHousePriceEss$Yea
 
 message("RQ1: How the mean house price across the regions changedfrom  2000  onward  and  Which  region  has  cheapest house.")
 
-p1 <- ggplot(data = res, aes(x = month, y = meanprice)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
-p2 <- ggplot(data = res, aes(x = month, y = sumcount)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
+ggplot(medianHousePriceEss, aes(x = factor(Year), y = Value)) + geom_point(aes(color = Name)) + xlab("Year")
+ggsave("Q1Geom_point.png", width = 16, height = 9, units = "in", dpi = 100)
 
-grid.arrange(p1, p2, ncol=2)
+ggplot(medianHousePriceEss, aes(x = factor(Year), y = Value, group=Name, colour=Name)) + geom_line() + xlab("Year")
+ggsave("Q1Geom_line.png", width = 16, height = 9, units = "in", dpi = 100)
+
+ggplot(data = medianHousePriceEss, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = medianHousePriceEss$Name) + xlab("Year")
+ggsave("Q1Geom_gridbar.png", width = 16, height = 6, units = "in", dpi = 320)
 
 
 message("RQ2: How the ratio of house price to workplace-based earn-ings changed from 2000 onward and which region hasthe most affordable houses.")
 
-groupColumns = c("year","city","type","age")
-dataColumns = c("price")
-res = ddply(propSaleEss, groupColumns, function(x) colMeans(x[dataColumns]))
-head(res)
+ggplot(affordRatioEss, aes(x = factor(Year), y = Value)) + geom_point(aes(color = Name)) + xlab("Year")
+ggsave("Q2Geom_point.png", width = 16, height = 9, units = "in", dpi = 100)
 
-res2 <- subset(res, type == "D" | type == "F")
-ggplot(data = res2, aes(x = year, y = price, fill=type)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
+ggplot(affordRatioEss, aes(x = factor(Year), y = Value, group=Name, colour=Name)) + geom_line() + xlab("Year")
+ggsave("Q2Geom_line.png", width = 16, height = 9, units = "in", dpi = 100)
 
-
-ggplot(data = res, aes(x = year, y = price, fill=age)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1))
+ggplot(data = affordRatioEss, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = affordRatioEss$Name) + xlab("Year")
+ggsave("Q2Geom_gridbar.png", width = 16, height = 6, units = "in", dpi = 320)
 
 
-message("RQ3: How the house price changes across different regioncorelated to each other. (what is the corelation coef-ficiency of house price between different regions.)")
-
-groupColumns = c("year", "type", "county")
-dataColumns = c("price")
-propSaleEss4 <- subset(propSaleEss, county == "Greater London" | county == "Nottinghamshire" | county == "Northumberland")
-res = ddply(propSaleEss4, groupColumns, summarize, meanprice=mean(price, 2), sumcount=sum(count))
-head(res)
-pdf("countyStats_bytypeage.pdf", onefile = TRUE, width = 14)
-ggplot(data = res, aes(x = year, y = meanprice, fill=county)) + geom_bar(stat="identity",position=position_dodge(0.9)) +theme(axis.text.x = element_text(size=10, angle = 90, hjust = 1)) + facet_grid(county ~ type) 
-dev.off()
-
-
-
-
-
-
-
+message("RQ3: How the affordability and house price affected by the economy crisis in 2008.")
+g1 <- ggplot(data = housePriceCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = housePriceCrisis$Name) + xlab("Year")
+g2 <- ggplot(data = affordRatioCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = affordRatioCrisis$Name) + xlab("Year")
+grid.arrange(g1, g2, nrow=2)
+ggsave("Q3Geom_gridbar.png", plot = grid.arrange(g1, g2, nrow=2), width = 16, height = 6, units = "in", dpi = 320)
