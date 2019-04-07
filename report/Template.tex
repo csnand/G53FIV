@@ -37,14 +37,14 @@ in London increased drastically these years, as a result, house price is becomin
 to most of the residents. Analysis of how the house price changed and 
 to what extend the affordability is affected by that changes is provided.
 
-This paper is intended to explore this issue based data about house prices and affordability measurements. 
+This paper is intend to explore this issue based data about house prices and affordability measurements. 
 In general, there are four sections, Initial Question, Data Processing, Information Visualisation and Evaluation.
 In Initial Questiions section, issuses related to house prices will be discussed therefore research questions 
 will be proposed. As for Data Processing part, information about dataset used in this paper will be briefly 
-introduced. Visualisation strategies will be discussed in Information Visualisation section alongside 
-data cleaning and transformation, and visual encoding. As for the Evaluation part, justifications of
-choice of visual encodings and stragies will be provided and also the general reflection of 
-development process.
+introduced and how it was processed and data cleaning and transformation process will be explained. 
+Visualisation strategies will be discussed in Information Visualisation section alongside visual encoding. 
+As for the Evaluation part, justifications of choice of visual encodings and stragies will be 
+provided and also the general reflection of development process.
 
 \section{Initial Questiions}
 As mentioned above, the increase of house price lead affordability concerns. A better understanding of 
@@ -93,49 +93,117 @@ Type conversion is an issue spacifically related to the R programming language. 
 xls form with the correct type for each category of data. But when loading those data into R, the default 
 data type was character. This issue may cause severe problem whrm performing numeric analysis and visualisation. 
 Therefore, data of house price, affordability ratio and data indicating time need to be converted into numeric type. 
- 
 
+As the the annual data is presented seperately in different columns, transformation is needed for further 
+data analysis. The original data was put seperately in columns by each year, which would be diffcult to 
+analyse changes based on timeline. Hence, the data was trnasformed into three-column form. Name of region, 
+year, and the actual values of price (or earnings, or ratios) were in three individual column.
 
 \section{Information Visualisation}
+In this section, all three initial question proposed earlier will be discussed with visualisation. 
+For each question, visualisation stragies and visual encoding will be explained in detail and 
+criticial discussions of visualisation design will be included in this section. After the three initial 
+questions were explored, exploratory process of proposing new question and visualisation of that question 
+will be explored.
 
+\subsection{House Price Visualisation}
+As mentioned earlier, the first question is intend to examine how the house price changed from 2000 to 2018 
+and to further probe which region has the lowest house price. As data processing operations described above. 
+The first graph can be obtained.
 
-
-% Below is an example of how to insert images. Delete the ``\vspace'' line,
-% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
-% with a suitable PostScript file name.
-% -------------------------------------------------------------------------
 \begin{figure}[htb]
-
-\begin{minipage}[b]{1.0\linewidth}
-  \centering
-  \centerline{\includegraphics[width=8.5cm]{Q1Geom_line_no_colour}}
-%  \vspace{2.0cm}
-  \centerline{(a) Result 1}\medskip
-\end{minipage}
-%
-\begin{minipage}[b]{.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{Q1Geom_line_no_colour}}
-%  \vspace{1.5cm}
-  \centerline{(b) Results 3}\medskip
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{Q1Geom_line_no_colour}}
-%  \vspace{1.5cm}
-  \centerline{(c) Result 4}\medskip
-\end{minipage}
-%
-\caption{Example of placing a figure with experimental results.}
-\label{fig:res}
-%
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q1Geom_line}}
+  %  \vspace{2.0cm}
+    \centerline{Question 1: Result 1}\medskip
+  \end{minipage}
 \end{figure}
 
+This line graph illustrate the median house prices in nine regions of England and Wales from 2000 to 2018. 
+England and Wales are also treated as regions and also England and Wales combined. Therefore, there 12 lines 
+in the graph that represent 12 regions individually. 
+
+The overall tendency of change for all regions is quite similar. Although flucuated for a few years, 
+the median house price in 12 regions was all increased from 2000 to 2018.
+
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q1Geom_point}}
+  %  \vspace{2.0cm}
+    \centerline{Question 1: Result 2}\medskip
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q1Geom_gridbar}}
+  %  \vspace{2.0cm}
+    \centerline{Question 1: Result 3}\medskip
+  \end{minipage}
+\end{figure}
+
+
+
+\subsection{Affordability Visualisation}
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q2Geom_line}}
+  %  \vspace{2.0cm}
+    \centerline{Question 2: Result 1}\medskip
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q2Geom_point}}
+  %  \vspace{2.0cm}
+    \centerline{Question 2: Result 2}\medskip
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q2Geom_gridbar}}
+  %  \vspace{2.0cm}
+    \centerline{Question 2: Result 3}\medskip
+  \end{minipage}
+\end{figure}
+
+\subsection{Impact of Economy Crisis}
+
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q3Geom_gridbar}}
+  %  \vspace{2.0cm}
+    \centerline{Question 3: Result}\medskip
+  \end{minipage}
+\end{figure}
+
+\subsection{Correlation Coefficients of House Price}
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{corHeatMap}}
+  %  \vspace{2.0cm}
+    \centerline{Correlation Coefficients: Result}\medskip
+  \end{minipage}
+\end{figure}
+
+
+
+
 \section{Evaluation}
-\subsection{Subheadings}
- 
-\subsubsection{Sub-subheadings}
 
 
 % To start a new column (but not a new page) and help balance the last-page
