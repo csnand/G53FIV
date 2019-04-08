@@ -5,6 +5,7 @@
 \documentclass{article}
 \usepackage{spconf,amsmath,graphicx}
 \usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{float}
 \addbibresource{reportRefs.bib}
 
 % Example definitions.
@@ -43,8 +44,7 @@ In Initial Questiions section, issuses related to house prices will be discussed
 will be proposed. As for Data Processing part, information about dataset used in this paper will be briefly 
 introduced and how it was processed and data cleaning and transformation process will be explained. 
 Visualisation strategies will be discussed in Information Visualisation section alongside visual encoding. 
-As for the Evaluation part, justifications of choice of visual encodings and stragies will be 
-provided and also the general reflection of development process.
+As for the Evaluation part, evaluation of visualisation will be provided with the general reflection of development process.
 
 \section{Initial Questiions}
 As mentioned above, the increase of house price lead affordability concerns. A better understanding of 
@@ -111,7 +111,7 @@ As mentioned earlier, the first question is intend to examine how the house pric
 and to further probe which region has the lowest house price. As data processing operations described above. 
 The first graph can be obtained.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q1Geom_line}}
@@ -139,7 +139,7 @@ This line graph as an example is expressive and efficient when representing time
 of quantitative during a continuous period of time. But sometimes, it is not appropriate for conducting 
 comparison. Therefore, the second graph was ontained using the same median house price data.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q1Geom_point}}
@@ -156,7 +156,7 @@ which caused diffculty to do the comparison.
 Based on the dot plot, it is self-evident that the north east region has houses with the lowest median price 
 from 2000 to 2018 while London has the most expensive houses.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q1Geom_gridbar}}
@@ -170,6 +170,40 @@ median house price data. This bar chart illustrates median house price of 12 reg
 grouped by region. This graph has advantage over the line graph and dot plot when studying the changes of median house price of individual 
 regions as it combines the benefit of those two while makes data related to individual region evident.
 
+\subsubsection{Visual Encodings}
+Based Bertin's semiology graphics \cite{BertinJacques}, the following characteristics of visual encoding variable 
+are taken into considerarion during the visualisation process. 
+
+\begin{itemize}
+  \item Selective:
+        whether the changes of a variable can make the variable distinctive from the group
+  \item Associative:
+        whether the changes of a variable can be interperted together as a group
+  \item Quantitative: 
+        whether the numerical measures can be identified from the changes of a variable
+  \item Length:
+        how many recognisable changes can be indentified in a variable
+\end{itemize}
+
+Combined with the characteristics listed above, there are two principles of choosing visual encodings that 
+also need to be enforced. Principle of consistancy refers to the properties of visual variable should match 
+the properties of data and the principle of importance ordering refers to encoding the most essential information 
+in a most practical manner.
+
+In terms of the line graph for this question, position and hue are selected for the graph. As visual variable, 
+position possesses characteristics like selective, associative and quantitative. Moreover, as for 
+the length characteristics, theoretically it can be infinite. While hue is selective and associative. As for length, 
+the limitation of length when using hue is hardly applied to this dataset. But without hue, the graph is not 
+effective nor expressive(See Appendix 1). By combining position and hue together, the line graph was drawed. 
+
+Judging from the desgin criteria, the line graph satififies expressiveness, and partial effectiveness because 
+the dot plot is more effective when compare house prices for all regions by year. Therefore, the dot plot was 
+obtained to address this issue.
+
+As for the bar chart, position ans hue are combined to achieve expressiveness and effectiveness. It turns out 
+that the bar chart is more effective than line graph and dot plot when study the house price of a individual region.
+
+
 
 
 \subsection{Affordability Visualisation}
@@ -178,7 +212,7 @@ and to further probe which region has the most affordable house. Due to the simi
 similar approaches for house price visualisation can be applied here. As data processing operations described above. 
 The first graph can be obtained.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q2Geom_line}}
@@ -209,7 +243,7 @@ This line graph as an example is expressive and efficient when representing time
 of quantitative during a continuous period of time. But sometimes, it is not appropriate for conducting 
 comparison. Therefore, the second graph was generated using the same affordability ratio data.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q2Geom_point}}
@@ -231,7 +265,7 @@ accross the regions but later on the affordability ratio of south west and south
 London did not possess the highest value of affordability ratio until late 2018, maintained its statue until 2018.
 
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q2Geom_gridbar}}
@@ -245,6 +279,26 @@ affordability ratio data. This bar chart illustrates affordability ratio of 12 r
 grouped by region. This graph has advantage over the line graph and dot plot when studying the changes of affordability ratio of individual 
 regions as it combines the benefit of those two while makes data related to individual region evident.
 
+\subsubsection{Visual Encodings}
+Combined with the characteristics listed above, there are two principles of choosing visual encodings that 
+also need to be enforced. Principle of consistancy refers to the properties of visual variable should match 
+the properties of data and the principle of importance ordering refers to encoding the most essential information 
+in a most practical manner.
+
+In terms of the line graph for this question, position and hue are selected for the graph. As visual variable, 
+position possesses characteristics like selective, associative and quantitative. Moreover, as for 
+the length characteristics, theoretically it can be infinite. While hue is selective and associative. As for length, 
+the limitation of length when using hue is hardly applied to this dataset. But without hue, the graph is not 
+effective nor expressive(See Appendix 1). By combining position and hue together, the line graph was drawed. 
+
+Judging from the desgin criteria, the line graph satififies expressiveness, and partial effectiveness because 
+the dot plot is more effective when compare house prices for all regions by year. Therefore, the dot plot was 
+obtained to address this issue.
+
+As for the bar chart, position ans hue are combined to achieve expressiveness and effectiveness. It turns out 
+that the bar chart is more effective than line graph and dot plot when study the house price of a individual region.
+
+
 
 
 \subsection{Impact of Economy Crisis}
@@ -253,7 +307,7 @@ in 12 regions. In this case, the date ned to be processed further. As the econom
 the comparison of the data in 2008 and 2009 would depict the immdiate impact of the economy crisis. By taking 
 in consideration of median house price, annual earnings and affordability ratio, the bar chart can be gained.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{Q3Geom_gridbar}}
@@ -274,6 +328,8 @@ slightly while the house price decreased, as a result, the affordability ratio d
 affordability ratio suggested that the houses in all 12 regions became more affordable as an impact of 
 economy crisis. 
 
+\subsubsection{Visual Encodings}
+
 \subsection{Correlation Coefficients of House Price}
 As the graphs shown in house price visualisation and affordability ratio visualisation section, the general 
 tendency in those regions were quite akin. So that result lead to another question, whether the house prices 
@@ -285,7 +341,7 @@ sorted by time. The correlation coefficient is numerical measure the can reveal 
 related to each other. After this transformation, the correlation coefficients can be calculated. Hence, 
 the heat map contains correlation coefficients can be obtained.
 
-\begin{figure}[htb]
+\begin{figure}[H]
   \begin{minipage}[b]{1.0\linewidth}
     \centering
     \centerline{\includegraphics[width=8.5cm]{corHeatMap}}
@@ -296,6 +352,13 @@ the heat map contains correlation coefficients can be obtained.
 
 As the heat map shows, the correlation coefficients scales from 1 to -1. The close the correlation coefficients 
 to 1 the more they are related and vice versa.
+
+As the data suggests, house prices in most region are highlty correlated as most of correlation coefficients 
+are above 0.9. Dispite correlation coefficients between some regions are below 0.9, they stil can be 
+considered colsely related as they all surpassed 0.8.
+
+\subsubsection{Visual Encodings}
+
 
 
 
@@ -308,8 +371,62 @@ to 1 the more they are related and vice versa.
 %\vfill
 %\pagebreak
 
+
 \vfill\pagebreak
 \printbibliography
+
+
+\vfill\pagebreak
+\vfill\pagebreak
+
+\section*{Appendix}
+\subsection{Appendix 1}
+\begin{figure}[H]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q1Geom_line_no_colour}}
+  %  \vspace{2.0cm}
+    \centerline{Q1 Line Graph No Colour}\medskip
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q1Geom_point_no_colour}}
+  %  \vspace{2.0cm}
+    \centerline{Q1 Dot Plot No Colour}\medskip
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q2Geom_line_no_colour}}
+  %  \vspace{2.0cm}
+    \centerline{Q2 Line Graph No Colour}\medskip
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{Q2Geom_point_no_colour}}
+  %  \vspace{2.0cm}
+    \centerline{Q2 Dot Plot No Colour}\medskip
+  \end{minipage}
+\end{figure}
+
+\subsection{Appendix 2}
+\begin{figure}[H]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.5cm]{mackinlayRankings}}
+  %  \vspace{2.0cm}
+    \centerline{Mackinlay's Effectiveness Rankings}\medskip
+  \end{minipage}
+\end{figure}
+
 
 
 \end{document}

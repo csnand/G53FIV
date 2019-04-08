@@ -79,6 +79,35 @@
       \verb https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/ratioofhousepricetoworkplacebasedearningslowerquartileandmedian
       \endverb
     \endentry
+    \entry{BertinJacques}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3cab6300d4027cea48cd80fabce75139}{%
+           family={Bertin},
+           familyi={B\bibinitperiod},
+           given={Jacques},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Madison, Wis: University of Wisconsin Press}%
+      }
+      \strng{namehash}{3cab6300d4027cea48cd80fabce75139}
+      \strng{fullhash}{3cab6300d4027cea48cd80fabce75139}
+      \strng{bibnamehash}{3cab6300d4027cea48cd80fabce75139}
+      \strng{authorbibnamehash}{3cab6300d4027cea48cd80fabce75139}
+      \strng{authornamehash}{3cab6300d4027cea48cd80fabce75139}
+      \strng{authorfullhash}{3cab6300d4027cea48cd80fabce75139}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0299090604}
+      \field{title}{Semiology of graphics}
+      \field{year}{1983}
+      \keyw{Graphic methods; Statistics -- Graphic methods; Maps,Statistical}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

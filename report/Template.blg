@@ -1,18 +1,18 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'Template.blg'
-[25] biber:315> INFO - === Sun Apr  7, 2019, 18:25:06
-[48] Biber.pm:371> INFO - Reading 'Template.bcf'
-[124] Biber.pm:889> INFO - Found 2 citekeys in bib section 0
-[145] Biber.pm:4093> INFO - Processing section 0
-[162] Biber.pm:4254> INFO - Looking for bibtex format file 'reportRefs.bib' for section 0
-[165] bibtex.pm:1523> INFO - LaTeX decoding ...
-[183] bibtex.pm:1340> INFO - Found BibTeX data source 'reportRefs.bib'
-[193] Utils.pm:193> WARN - month field 'Mar' in entry 'henretty_2019' is not an integer - this will probably not sort properly.
-[199] Utils.pm:193> WARN - month field 'Mar' in entry 'henretty_data_2019' is not an integer - this will probably not sort properly.
-[211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[212] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[212] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[223] bbl.pm:636> INFO - Writing 'Template.bbl' with encoding 'UTF-8'
-[225] bbl.pm:739> INFO - Output to Template.bbl
-[226] Biber.pm:110> INFO - WARNINGS: 2
+[3] Config.pm:307> INFO - Logfile is 'Template.blg'
+[51] biber:315> INFO - === Mon Apr  8, 2019, 09:24:00
+[118] Biber.pm:371> INFO - Reading 'Template.bcf'
+[263] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
+[299] Biber.pm:4093> INFO - Processing section 0
+[331] Biber.pm:4254> INFO - Looking for bibtex format file 'reportRefs.bib' for section 0
+[335] bibtex.pm:1523> INFO - LaTeX decoding ...
+[361] bibtex.pm:1340> INFO - Found BibTeX data source 'reportRefs.bib'
+[375] Utils.pm:193> WARN - month field 'Mar' in entry 'henretty_2019' is not an integer - this will probably not sort properly.
+[392] Utils.pm:193> WARN - month field 'Mar' in entry 'henretty_data_2019' is not an integer - this will probably not sort properly.
+[462] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[465] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[469] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[474] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[496] bbl.pm:636> INFO - Writing 'Template.bbl' with encoding 'UTF-8'
+[502] bbl.pm:739> INFO - Output to Template.bbl
+[506] Biber.pm:110> INFO - WARNINGS: 2

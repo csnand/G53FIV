@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.4)  8 APR 2019 08:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.4)  8 APR 2019 10:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,7 +346,14 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
  (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-))
+)) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count291
+\float@exts=\toks20
+\float@box=\box29
+\@float@everytoks=\toks21
+\@floatcapt=\box30
+)
 
 Package biblatex Warning: File 'english-ieee.lbx' not found!
 (biblatex)                Ignoring mapping 'english' -> 'english-ieee'.
@@ -356,39 +363,39 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
-\@quotelevel=\count291
-\@quotereset=\count292
+\@quotelevel=\count292
+\@quotereset=\count293
  (/home/jackey/Downloads/G53FIV/report/Template.aux)
 \openout1 = `Template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count293
+\scratchcounter=\count294
 \scratchdimen=\dimen114
-\scratchbox=\box29
-\nofMPsegments=\count294
-\nofMParguments=\count295
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count296
+\scratchbox=\box31
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count297
 \MPscratchDim=\dimen115
-\MPnumerator=\count297
-\makeMPintoPDFobject=\count298
-\everyMPtoPDFconversion=\toks21
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks23
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -411,12 +418,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Template.bbl' found.
  (/home/jackey/Downloads/G53FIV/report/Template.bbl)
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
+Package biblatex Info: Reference section=0 on input line 28.
+Package biblatex Info: Reference segment=0 on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -441,86 +448,133 @@ File: Q1Geom_gridbar.png Graphic file (type png)
 Package pdftex.def Info: Q1Geom_gridbar.png  used on input line 162.
 (pdftex.def)             Requested size: 241.84842pt x 90.69235pt.
  [2 </home/jackey/Downloads/G53FIV/report/Q1Geom_line.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q1Geom_point.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q1Geom_gridbar.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 178.
+ (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
 <Q2Geom_line.png, id=15, 1156.32pt x 650.43pt>
 File: Q2Geom_line.png Graphic file (type png)
 <use Q2Geom_line.png>
-Package pdftex.def Info: Q2Geom_line.png  used on input line 184.
+Package pdftex.def Info: Q2Geom_line.png  used on input line 218.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
 <Q2Geom_point.png, id=16, 1156.32pt x 650.43pt>
 File: Q2Geom_point.png Graphic file (type png)
 <use Q2Geom_point.png>
-Package pdftex.def Info: Q2Geom_point.png  used on input line 215.
+Package pdftex.def Info: Q2Geom_point.png  used on input line 249.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
-<Q2Geom_gridbar.png, id=17, 1156.32pt x 433.62pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 </home/jackey/Downloads/G53FIV/report/Q2Geom_line.png (PNG copy)>]
+<Q2Geom_gridbar.png, id=21, 1156.32pt x 433.62pt>
 File: Q2Geom_gridbar.png Graphic file (type png)
 <use Q2Geom_gridbar.png>
-Package pdftex.def Info: Q2Geom_gridbar.png  used on input line 237.
+Package pdftex.def Info: Q2Geom_gridbar.png  used on input line 271.
 (pdftex.def)             Requested size: 241.84842pt x 90.69235pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 </home/jackey/Downloads/G53FIV/report/Q2Geom_line.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q2Geom_point.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q2Geom_gridbar.png (PNG copy)>]
-<Q3Geom_gridbar.png, id=21, 1156.32pt x 722.7pt>
+<Q3Geom_gridbar.png, id=22, 1156.32pt x 722.7pt>
 File: Q3Geom_gridbar.png Graphic file (type png)
 <use Q3Geom_gridbar.png>
-Package pdftex.def Info: Q3Geom_gridbar.png  used on input line 259.
+Package pdftex.def Info: Q3Geom_gridbar.png  used on input line 313.
 (pdftex.def)             Requested size: 241.84842pt x 151.15393pt.
-<corHeatMap.png, id=22, 1156.32pt x 650.43pt>
+ [4 </home/jackey/Downloads/G53FIV/report/Q2Geom_point.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q2Geom_gridbar.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q3Geom_gridbar.png (PNG copy)>]
+<corHeatMap.png, id=26, 1156.32pt x 650.43pt>
 File: corHeatMap.png Graphic file (type png)
 <use corHeatMap.png>
-Package pdftex.def Info: corHeatMap.png  used on input line 291.
+Package pdftex.def Info: corHeatMap.png  used on input line 347.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
- [4 </home/jackey/Downloads/G53FIV/report/Q3Geom_gridbar.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/corHeatMap.png (PNG copy)>]
+ [5 </home/jackey/Downloads/G53FIV/report/corHeatMap.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 312.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 312.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 376.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 376.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1688) in paragraph at lines 313--313
+Underfull \hbox (badness 1688) in paragraph at lines 377--377
 []\OT1/ptm/m/n/10 N. Hen-retty, \OT1/ptm/m/it/10 Hous-ing af-ford-abil-ity in eng-land and
  []
 
 
-Overfull \hbox (52.96622pt too wide) in paragraph at lines 313--313
+Overfull \hbox (52.96622pt too wide) in paragraph at lines 377--377
 \OT1/pcr/m/n/10 / / www . ons . gov . uk / peoplepopulationandcommunity /
  []
 
 
-Overfull \hbox (112.96622pt too wide) in paragraph at lines 313--313
+Overfull \hbox (112.96622pt too wide) in paragraph at lines 377--377
 \OT1/pcr/m/n/10 housing / bulletins / housingaffordabilityinenglandandwales /
  []
 
 
-Overfull \hbox (16.96622pt too wide) in paragraph at lines 313--313
+Overfull \hbox (16.96622pt too wide) in paragraph at lines 377--377
 \OT1/pcr/m/n/10 ons . gov . uk / peoplepopulationandcommunity /
  []
 
 
-Overfull \hbox (259.46622pt too wide) in paragraph at lines 313--313
+Overfull \hbox (259.46622pt too wide) in paragraph at lines 377--377
 \OT1/pcr/m/n/10 housing / datasets / ratioofhousepricetoworkplacebasedearningslowerquartileandmedian$\OT1/ptm/m/n/10 . 
  []
 
-[5
 
-] (/home/jackey/Downloads/G53FIV/report/Template.aux)
+Overfull \hbox (1.93118pt too wide) in paragraph at lines 377--377
+\OT1/ptm/m/n/10 Uni-ver-sity of Wis-con-sin Press, 1983, \OT1/ptm/m/sc/10 isbn\OT1/ptm/m/n/10 : 0299090604. 
+ []
+
+<Q1Geom_line_no_colour.png, id=30, 1156.32pt x 650.43pt>
+File: Q1Geom_line_no_colour.png Graphic file (type png)
+<use Q1Geom_line_no_colour.png>
+Package pdftex.def Info: Q1Geom_line_no_colour.png  used on input line 387.
+(pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+<Q1Geom_point_no_colour.png, id=31, 1156.32pt x 650.43pt>
+File: Q1Geom_point_no_colour.png Graphic file (type png)
+<use Q1Geom_point_no_colour.png>
+Package pdftex.def Info: Q1Geom_point_no_colour.png  used on input line 396.
+(pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+<Q2Geom_line_no_colour.png, id=32, 1156.32pt x 650.43pt>
+File: Q2Geom_line_no_colour.png Graphic file (type png)
+<use Q2Geom_line_no_colour.png>
+Package pdftex.def Info: Q2Geom_line_no_colour.png  used on input line 405.
+(pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+<Q2Geom_point_no_colour.png, id=33, 1156.32pt x 650.43pt>
+File: Q2Geom_point_no_colour.png Graphic file (type png)
+<use Q2Geom_point_no_colour.png>
+Package pdftex.def Info: Q2Geom_point_no_colour.png  used on input line 414.
+(pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 </home/jackey/Downloads/G53FIV/report/Q1Geom_line_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q1Geom_point_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q2Geom_line_no_colour.png>]
+<mackinlayRankings.png, id=41, 301.125pt x 188.705pt>
+File: mackinlayRankings.png Graphic file (type png)
+<use mackinlayRankings.png>
+Package pdftex.def Info: mackinlayRankings.png  used on input line 424.
+(pdftex.def)             Requested size: 241.84842pt x 151.56311pt.
+ [7
+
+ </home/jackey/Downloads/G53FIV/report/Q2Geom_point_no_colour.png> </home/jackey/Downloads/G53FIV/report/mackinlayRankings.png>] (/home/jackey/Downloads/G53FIV/report/Template.aux)
 Package logreq Info: Writing requests to 'Template.run.xml'.
 \openout1 = `Template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8909 strings out of 492616
- 155862 string characters out of 6135178
- 582053 words of memory out of 5000000
- 12718 multiletter control sequences out of 15000+600000
- 19942 words of font info for 45 fonts, out of 8000000 for 9000
+ 9018 strings out of 492616
+ 157815 string characters out of 6135178
+ 583476 words of memory out of 5000000
+ 12813 multiletter control sequences out of 15000+600000
+ 21666 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,45p,924b,1229s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/jackey/Downloads/G53FIV/report/Template.pdf (5 pages, 1259385 bytes).
+ 36i,7n,45p,911b,1229s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /home/jackey/Downloads/G53FIV/report/Template.pdf (7 pages, 1499008 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
