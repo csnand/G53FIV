@@ -130,9 +130,10 @@ ggsave("Q2Geom_gridbar.png", width = 16, height = 6, units = "in", dpi = 320)
 
 
 message("RQ3: How the affordability and house price affected by the economy crisis in 2008.")
+g <- ggplot(data = earningCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = earningCrisis$Name) + xlab("Year")
 g1 <- ggplot(data = housePriceCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = housePriceCrisis$Name) + xlab("Year")
 g2 <- ggplot(data = affordRatioCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = affordRatioCrisis$Name) + xlab("Year")
-grid.arrange(g1, g2, nrow=2)
+grid.arrange(g, g1, g2, nrow=3)
 ggsave("Q3Geom_gridbar.png", plot = grid.arrange(g1, g2, nrow=2), width = 16, height = 6, units = "in", dpi = 320)
 
 
