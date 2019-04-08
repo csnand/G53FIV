@@ -250,8 +250,8 @@ regions as it combines the benefit of those two while makes data related to indi
 \subsection{Impact of Economy Crisis}
 The last of initial question is to audit the impact the economy crisis has on house price and affordability
 in 12 regions. In this case, the date ned to be processed further. As the economy crisis happened in 2018, 
-the comparison of the data in 2008 and 2009 would depict the immdiate impact of the economy crisis. 
-
+the comparison of the data in 2008 and 2009 would depict the immdiate impact of the economy crisis. By taking 
+in consideration of median house price, annual earnings and affordability ratio, the bar chart can be gained.
 
 \begin{figure}[htb]
   \begin{minipage}[b]{1.0\linewidth}
@@ -262,7 +262,28 @@ the comparison of the data in 2008 and 2009 would depict the immdiate impact of 
   \end{minipage}
 \end{figure}
 
+This bar chart combines the data of median house price, median annual gross workplace-based earnings and 
+affordability ratio from 2008 to 2009. This chart is intend to show the immdiate impact of the economy crisis 
+in 2008. As graph shows, the first rwo indicates the annual earning data, the second row represents the median 
+house price data and the last row suggests affordability ratio. 
+
+As the graph demostrated, the economy crisis did not seems to have serve impact on annual earnings as the 
+annual earnings did not experience any regression in any region. In contract, the impact of the economy crisis 
+was obvious, for the house price decreased in all 12 regions. By combining these data, the annual earnings increased 
+slightly while the house price decreased, as a result, the affordability ratio decreased. The diminish of 
+affordability ratio suggested that the houses in all 12 regions became more affordable as an impact of 
+economy crisis. 
+
 \subsection{Correlation Coefficients of House Price}
+As the graphs shown in house price visualisation and affordability ratio visualisation section, the general 
+tendency in those regions were quite akin. So that result lead to another question, whether the house prices 
+in those regions were related and if they were related how closely they are related to each other.
+
+In search this question, further data transformation is needed. The column in dataset which identify time 
+ca be omitted. Furthermore, each region was put in seperate column with all of the data related to the region 
+sorted by time. The correlation coefficient is numerical measure the can reveal how diferent entities are 
+related to each other. After this transformation, the correlation coefficients can be calculated. Hence, 
+the heat map contains correlation coefficients can be obtained.
 
 \begin{figure}[htb]
   \begin{minipage}[b]{1.0\linewidth}
@@ -273,6 +294,8 @@ the comparison of the data in 2008 and 2009 would depict the immdiate impact of 
   \end{minipage}
 \end{figure}
 
+As the heat map shows, the correlation coefficients scales from 1 to -1. The close the correlation coefficients 
+to 1 the more they are related and vice versa.
 
 
 
