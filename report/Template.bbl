@@ -108,6 +108,40 @@
       \field{year}{1983}
       \keyw{Graphic methods; Statistics -- Graphic methods; Maps,Statistical}
     \endentry
+    \entry{MackinlayJock1986Atdo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9290a6af65bf969ceda189b25b08491b}{%
+           family={Mackinlay},
+           familyi={M\bibinitperiod},
+           given={Jock},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{9290a6af65bf969ceda189b25b08491b}
+      \strng{fullhash}{9290a6af65bf969ceda189b25b08491b}
+      \strng{bibnamehash}{9290a6af65bf969ceda189b25b08491b}
+      \strng{authorbibnamehash}{9290a6af65bf969ceda189b25b08491b}
+      \strng{authornamehash}{9290a6af65bf969ceda189b25b08491b}
+      \strng{authorfullhash}{9290a6af65bf969ceda189b25b08491b}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1557-7368}
+      \field{journaltitle}{ACM Transactions on Graphics (TOG)}
+      \field{number}{2}
+      \field{title}{Automating the design of graphical presentations of relational information}
+      \field{volume}{5}
+      \field{year}{1986}
+      \field{pages}{110\bibrangedash 141}
+      \range{pages}{32}
+      \keyw{Engineering}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
