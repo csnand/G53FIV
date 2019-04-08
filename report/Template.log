@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.4)  8 APR 2019 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.4)  8 APR 2019 13:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -435,29 +435,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Q1Geom_line.png, id=9, 1156.32pt x 650.43pt>
 File: Q1Geom_line.png Graphic file (type png)
 <use Q1Geom_line.png>
-Package pdftex.def Info: Q1Geom_line.png  used on input line 117.
+Package pdftex.def Info: Q1Geom_line.png  used on input line 92.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
 <Q1Geom_point.png, id=10, 1156.32pt x 650.43pt>
 File: Q1Geom_point.png Graphic file (type png)
 <use Q1Geom_point.png>
-Package pdftex.def Info: Q1Geom_point.png  used on input line 145.
+Package pdftex.def Info: Q1Geom_point.png  used on input line 112.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
 <Q1Geom_gridbar.png, id=11, 1156.32pt x 433.62pt>
 File: Q1Geom_gridbar.png Graphic file (type png)
 <use Q1Geom_gridbar.png>
-Package pdftex.def Info: Q1Geom_gridbar.png  used on input line 162.
+Package pdftex.def Info: Q1Geom_gridbar.png  used on input line 129.
 (pdftex.def)             Requested size: 241.84842pt x 90.69235pt.
  [2 </home/jackey/Downloads/G53FIV/report/Q1Geom_line.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q1Geom_point.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q1Geom_gridbar.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 178.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 142.
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
 <Q2Geom_line.png, id=15, 1156.32pt x 650.43pt>
 File: Q2Geom_line.png Graphic file (type png)
 <use Q2Geom_line.png>
-Package pdftex.def Info: Q2Geom_line.png  used on input line 218.
+Package pdftex.def Info: Q2Geom_line.png  used on input line 178.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
 
 Underfull \vbox (badness 3158) has occurred while \output is active []
@@ -465,7 +465,7 @@ Underfull \vbox (badness 3158) has occurred while \output is active []
 <Q2Geom_point.png, id=16, 1156.32pt x 650.43pt>
 File: Q2Geom_point.png Graphic file (type png)
 <use Q2Geom_point.png>
-Package pdftex.def Info: Q2Geom_point.png  used on input line 249.
+Package pdftex.def Info: Q2Geom_point.png  used on input line 200.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -474,104 +474,105 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Q2Geom_gridbar.png, id=21, 1156.32pt x 433.62pt>
 File: Q2Geom_gridbar.png Graphic file (type png)
 <use Q2Geom_gridbar.png>
-Package pdftex.def Info: Q2Geom_gridbar.png  used on input line 271.
+Package pdftex.def Info: Q2Geom_gridbar.png  used on input line 221.
 (pdftex.def)             Requested size: 241.84842pt x 90.69235pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1924) has occurred while \output is active []
 
 <Q3Geom_gridbar.png, id=22, 1156.32pt x 722.7pt>
 File: Q3Geom_gridbar.png Graphic file (type png)
 <use Q3Geom_gridbar.png>
-Package pdftex.def Info: Q3Geom_gridbar.png  used on input line 311.
+Package pdftex.def Info: Q3Geom_gridbar.png  used on input line 253.
 (pdftex.def)             Requested size: 241.84842pt x 151.15393pt.
  [4 </home/jackey/Downloads/G53FIV/report/Q2Geom_point.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q2Geom_gridbar.png (PNG copy)> </home/jackey/Downloads/G53FIV/report/Q3Geom_gridbar.png (PNG copy)>]
 <corHeatMap.png, id=26, 1156.32pt x 650.43pt>
 File: corHeatMap.png Graphic file (type png)
 <use corHeatMap.png>
-Package pdftex.def Info: corHeatMap.png  used on input line 356.
+Package pdftex.def Info: corHeatMap.png  used on input line 284.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
+
+Underfull \vbox (badness 3601) has occurred while \output is active []
+
  [5 </home/jackey/Downloads/G53FIV/report/corHeatMap.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 387.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 387.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 330.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 330.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1688) in paragraph at lines 388--388
+Underfull \hbox (badness 1688) in paragraph at lines 331--331
 []\OT1/ptm/m/n/10 N. Hen-retty, \OT1/ptm/m/it/10 Hous-ing af-ford-abil-ity in eng-land and
  []
 
 
-Overfull \hbox (52.96622pt too wide) in paragraph at lines 388--388
+Overfull \hbox (52.96622pt too wide) in paragraph at lines 331--331
 \OT1/pcr/m/n/10 / / www . ons . gov . uk / peoplepopulationandcommunity /
  []
 
 
-Overfull \hbox (112.96622pt too wide) in paragraph at lines 388--388
+Overfull \hbox (112.96622pt too wide) in paragraph at lines 331--331
 \OT1/pcr/m/n/10 housing / bulletins / housingaffordabilityinenglandandwales /
  []
 
 
-Overfull \hbox (16.96622pt too wide) in paragraph at lines 388--388
+Overfull \hbox (16.96622pt too wide) in paragraph at lines 331--331
 \OT1/pcr/m/n/10 ons . gov . uk / peoplepopulationandcommunity /
  []
 
 
-Overfull \hbox (259.46622pt too wide) in paragraph at lines 388--388
+Overfull \hbox (259.46622pt too wide) in paragraph at lines 331--331
 \OT1/pcr/m/n/10 housing / datasets / ratioofhousepricetoworkplacebasedearningslowerquartileandmedian$\OT1/ptm/m/n/10 . 
  []
 
 
-Overfull \hbox (1.93118pt too wide) in paragraph at lines 388--388
+Overfull \hbox (1.93118pt too wide) in paragraph at lines 331--331
 \OT1/ptm/m/n/10 Uni-ver-sity of Wis-con-sin Press, 1983, \OT1/ptm/m/sc/10 isbn\OT1/ptm/m/n/10 : 0299090604. 
  []
 
-<Q1Geom_line_no_colour.png, id=30, 1156.32pt x 650.43pt>
+[6]
+<Q1Geom_line_no_colour.png, id=34, 1156.32pt x 650.43pt>
 File: Q1Geom_line_no_colour.png Graphic file (type png)
 <use Q1Geom_line_no_colour.png>
-Package pdftex.def Info: Q1Geom_line_no_colour.png  used on input line 398.
+Package pdftex.def Info: Q1Geom_line_no_colour.png  used on input line 338.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
-<Q1Geom_point_no_colour.png, id=31, 1156.32pt x 650.43pt>
+<Q1Geom_point_no_colour.png, id=35, 1156.32pt x 650.43pt>
 File: Q1Geom_point_no_colour.png Graphic file (type png)
 <use Q1Geom_point_no_colour.png>
-Package pdftex.def Info: Q1Geom_point_no_colour.png  used on input line 407.
+Package pdftex.def Info: Q1Geom_point_no_colour.png  used on input line 347.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
-<Q2Geom_line_no_colour.png, id=32, 1156.32pt x 650.43pt>
+<Q2Geom_line_no_colour.png, id=36, 1156.32pt x 650.43pt>
 File: Q2Geom_line_no_colour.png Graphic file (type png)
 <use Q2Geom_line_no_colour.png>
-Package pdftex.def Info: Q2Geom_line_no_colour.png  used on input line 416.
+Package pdftex.def Info: Q2Geom_line_no_colour.png  used on input line 356.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
-<Q2Geom_point_no_colour.png, id=33, 1156.32pt x 650.43pt>
+<Q2Geom_point_no_colour.png, id=37, 1156.32pt x 650.43pt>
 File: Q2Geom_point_no_colour.png Graphic file (type png)
 <use Q2Geom_point_no_colour.png>
-Package pdftex.def Info: Q2Geom_point_no_colour.png  used on input line 425.
+Package pdftex.def Info: Q2Geom_point_no_colour.png  used on input line 365.
 (pdftex.def)             Requested size: 241.84842pt x 136.03854pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 </home/jackey/Downloads/G53FIV/report/Q1Geom_line_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q1Geom_point_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q2Geom_line_no_colour.png>]
-<mackinlayRankings.png, id=41, 301.125pt x 188.705pt>
+<mackinlayRankings.png, id=38, 301.125pt x 188.705pt>
 File: mackinlayRankings.png Graphic file (type png)
 <use mackinlayRankings.png>
-Package pdftex.def Info: mackinlayRankings.png  used on input line 435.
+Package pdftex.def Info: mackinlayRankings.png  used on input line 375.
 (pdftex.def)             Requested size: 241.84842pt x 151.56311pt.
- [7
-
- </home/jackey/Downloads/G53FIV/report/Q2Geom_point_no_colour.png> </home/jackey/Downloads/G53FIV/report/mackinlayRankings.png>] (/home/jackey/Downloads/G53FIV/report/Template.aux)
+ [7 </home/jackey/Downloads/G53FIV/report/Q1Geom_line_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q1Geom_point_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q2Geom_line_no_colour.png> </home/jackey/Downloads/G53FIV/report/Q2Geom_point_no_colour.png> </home/jackey/Downloads/G53FIV/report/mackinlayRankings.png>] (/home/jackey/Downloads/G53FIV/report/Template.aux)
 Package logreq Info: Writing requests to 'Template.run.xml'.
 \openout1 = `Template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9024 strings out of 492616
- 157996 string characters out of 6135178
- 583548 words of memory out of 5000000
- 12819 multiletter control sequences out of 15000+600000
+ 9026 strings out of 492616
+ 158068 string characters out of 6135178
+ 583588 words of memory out of 5000000
+ 12821 multiletter control sequences out of 15000+600000
  21666 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,45p,911b,1227s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,7n,45p,911b,1229s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/jackey/Downloads/G53FIV/report/Template.pdf (7 pages, 1501520 bytes).
+Output written on /home/jackey/Downloads/G53FIV/report/Template.pdf (7 pages, 1503108 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

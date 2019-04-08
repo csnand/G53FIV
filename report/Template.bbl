@@ -142,6 +142,32 @@
       \range{pages}{32}
       \keyw{Engineering}
     \endentry
+    \entry{Fry}{book}{}
+      \name{author}{1}{}{%
+        {{hash=94eb1434c985c7d7a922693b8098da23}{%
+           family={Fry},
+           familyi={F\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{94eb1434c985c7d7a922693b8098da23}
+      \strng{fullhash}{94eb1434c985c7d7a922693b8098da23}
+      \strng{bibnamehash}{94eb1434c985c7d7a922693b8098da23}
+      \strng{authorbibnamehash}{94eb1434c985c7d7a922693b8098da23}
+      \strng{authornamehash}{94eb1434c985c7d7a922693b8098da23}
+      \strng{authorfullhash}{94eb1434c985c7d7a922693b8098da23}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{978-0-596-51455-6}
+      \field{title}{Visualizing Data}
+      \field{year}{2008}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
