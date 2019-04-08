@@ -134,7 +134,7 @@ g <- ggplot(data = earningCrisis, aes(x = factor(Year), y = Value, fill=Name)) +
 g1 <- ggplot(data = housePriceCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = housePriceCrisis$Name) + xlab("Year")
 g2 <- ggplot(data = affordRatioCrisis, aes(x = factor(Year), y = Value, fill=Name)) + geom_bar(stat="identity",position=position_dodge(0.9)) + theme(axis.text.x = element_text(size=4, angle = 90, hjust = 1)) + facet_grid(rows = affordRatioCrisis$Name) + xlab("Year")
 grid.arrange(g, g1, g2, nrow=3)
-ggsave("Q3Geom_gridbar.png", plot = grid.arrange(g1, g2, nrow=2), width = 16, height = 6, units = "in", dpi = 320)
+ggsave("Q3Geom_gridbar.png", plot = grid.arrange(g, g1, g2, nrow=3), width = 16, height = 10, units = "in", dpi = 320)
 
 
 
